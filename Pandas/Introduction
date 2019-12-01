@@ -1,0 +1,27 @@
+Pandas
+
+Popular library for data analysis
+It has two core objects
+Dataframe
+series
+
+
+DataFrame is table contains row and column values
+
+code
+
+import pandas as pd
+
+a=pd.DataFrame({ 'Yes':[50,21],'No': [23,43]},index=['a','b'])
+print(a)
+
+output:
+   Yes  No
+a   50  23
+b   21  43
+
+Series 
+in essence is a single column of the DataFrame
+it has no column name
+it has overall one name
+
