@@ -25,3 +25,74 @@ in essence is a single column of the DataFrame
 it has no column name
 it has overall one name
 
+code
+
+import pandas as pd
+
+a=pd.Series([1,2,3],index=['a','b','c'],name='vishant')
+print(a)
+
+output
+a    1
+b    2
+c    3
+Name: vishant, dtype: int64
+
+
+1. INDEXING IN PANDAS
+   1.Index based
+      Retrieve data with numerical index(positions) with iloc 
+   2. Label-based
+      Retrieve data with data index value with loc
+
+
+PANDAS FUNCTIONS
+a=pd.read_csv("")
+1.a.shape()
+   it gives (no of rows, no of columns)
+2.a.head() || a.head(n)
+   Displays 5 records
+3. a.column_name || a.['column_name']
+   Display only that column's data
+4. a.column_name[index_number] || a['column_name'][index_number]
+   Display particular data of columns's index
+5.a.iloc[index]
+   Retrieve rowwise data
+6.a.iloc[:,column_no]
+   retrieve column_no's data
+   a.iloc[1:1,1]
+7 a.loc[:,'column_name'] || a.loc[:,['col_1','col_2']] 
+
+NOTE: LOC TAKES 0:n inclusively but ILOC takes 0 to n-1 
+NOTE: The semantics of using loc are the same as those for iloc
+
+
+2. MANIPULATING THE INDEX  
+   we can change index to any column by
+   a.set_index("column_name")
+
+3. CONDITIONAL SELECTION
+   1.a.column_name=particular_data
+    it returns boolean answer
+   2.a.loc[a.column_name='value'] || a.loc[any condition]
+      retrieve rowwise data according to condition
+   3.ISIN()
+      a.loc[a.column_name.IsIn([value1,value2])]
+      return rows from dataframe where column value found in predefined collection
+   4 isNotnull()
+      a.loc[a.column_name.notnull()]
+
+4. ASSIGN VALUE
+   a.column_name='vishant' || a.column_name=any function
+   it print vishant for all rows in that particular column
+
+5. SUMMARY FUNCTION
+   a.column_name.describe()
+   a.colum_name.mean() || max() || min() || sum() || unique() || 
+   count_values(): return unique value with its frequency
+   return details of the column
+
+6. GroupBy Analysis
+   return different item with frequency
+   a.groupby('column_name').column_name.count()
+   Note: value.counts() is same as groupby but it shows data from decreasing order
