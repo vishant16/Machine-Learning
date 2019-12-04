@@ -96,3 +96,25 @@ NOTE: The semantics of using loc are the same as those for iloc
    return different item with frequency
    a.groupby('column_name').column_name.count()
    Note: value.counts() is same as groupby but it shows data from decreasing order
+   
+7 Sorting
+
+   a.sort_values(by='column_name')
+   a.sort_values(bt=''column_name',ascending=false)
+8 Missing value
+   a.fillna('vishant')
+      return vishant in place of NaN   
+9 a.replace(a,'vishant')
+   a replaced by vishant in csv file
+10 RENAME
+   changes index and column name
+   a.rename(columns={'previous_name':'new_name'})
+   a.rename(index={0:'a',1:'b'})
+   
+11 Rename_axis
+   a.rename_axis('vishant',axis='rows').rename_axis('panchal,'columns')
+   
+12 CONCANATE
+   csv1=pd.read_csv('path1') and same for csv2
+   a.concat([csv1,csv2])
+   
