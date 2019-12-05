@@ -117,4 +117,30 @@ NOTE: The semantics of using loc are the same as those for iloc
 12 CONCANATE
    csv1=pd.read_csv('path1') and same for csv2
    a.concat([csv1,csv2])
+
+13.DATATYPES
+   a.dtypes || a.column_name.dtype
+   return datatypes of columns
    
+   changing datatype of column
+   a.column_name.astype('int64')
+   
+   missing value
+   a.fillna('vishant')
+   return vishant in all missing value 
+   
+   replace
+   a.replace('old_name','new_name')
+   
+   rename column-Name
+   a.rename(columbs={'old':'new'})
+   
+   rename index
+   a.rename(index={'0:'a',1:'b'})
+   
+   rename_axis
+   a.rename_axis('vishant',axis='rows').rename_axis('panchal',axis='columns')
+   
+ 14. JOIN 2 csv file
+      
+      pd.concate([csv1,csv2])
